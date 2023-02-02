@@ -1,0 +1,867 @@
+/*********************/
+/* Main basic styling */
+/*********************/
+
+/* this is mostly for modal */
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/* use vh for text headers to make responsive */
+.h2 {
+  font-size: 2.5vh;
+}
+
+.h3 {
+  font-size: 1.5vh;
+}
+
+.h4 {
+  font-size: 1.25vh;
+  font-weight: 700;
+}
+
+.p {
+  color: #434244;
+  font-size: 20px;
+  line-height: 1.75;
+  letter-spacing: .015em;
+  margin: 0;
+  padding: 0 0 18px;
+}
+
+
+/* section seperator */
+.separator{
+  display: flex;
+  align-items: center;
+  color: #182636;
+  padding: 20px 0;
+  /* mostly for modal */
+  width: 100%;
+}
+
+.separator h2{
+  padding: 0 2rem; /* creates the space */
+}
+
+.separator .line{
+  flex: 1;
+  height: 1px;
+  background-color: #bbb;
+}
+
+/***************************/
+/* Styling HTML componerts */
+/**************************/
+
+/* fixed header */
+.header-main {
+  width: 100%;
+  background-color: #9FCCC6;
+  top: 0;
+  position: fixed;
+  z-index: 900;
+}
+
+/* this div is to set header to align items and is responsive */
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 20px;
+
+}
+
+/**************/
+/* Navigation */
+/**************/
+
+.nav-outer {
+  position: relative;
+}
+
+/* hamburger menu responsive */
+.nav-outer img {
+  display: none;
+  padding: 15px;
+}
+
+/* for positioning of full width nav */
+.nav {
+  display: flex;
+  align-items: center;  
+}
+ 
+.nav-menu-item {
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.nav-menu-item a {
+  text-decoration: none;
+  color: black;
+}
+
+/* link interactions */
+.nav-menu-item a:hover {color:white;}
+.nav-menu-item a:active {color:white;}
+
+/* This interferes with active highlight below
+.nav-menu-item a:visited {color:black;} */
+
+/* text highlight in white on current page */
+.nav-link.active  {
+  color: white;
+}
+
+
+/* For tablet size and below show hamburger with black nav */
+@media (max-width: 768px){
+
+  /* show hamburger menu */
+  .nav-outer img {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* to keep hamburger highlighted when nav is hovered  use .nav-outer img:hover to remove highlight*/
+  .nav-outer:hover {
+    background-color: #E41951;
+  }
+
+  /* remove nav otherwise displayed on resize */
+  .nav {
+    display: none;
+  }
+
+  /* the plus is so that the styles can be applied to nav */
+  /* make nav visable on hover */
+  .nav-outer img:hover + .nav {
+    border: 1px solid #E41951;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+  }
+
+   /* this is to keep nav visible when nov-outer img no longer hovered */
+  .nav:hover {
+    border: 1px solid #E41951;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .nav-menu-item {
+    padding: 5px 0px;
+  }
+  .nav-menu-item:hover {
+    background-color: #E41951;
+  }
+
+  /* so that the whole div is clickable */
+  .nav-menu-item a {
+    display: block;
+  }
+  .nav-menu-item:hover a {
+    color: white;
+  }
+
+  /* when page is active */
+  .nav-link.active {
+   border-bottom: 2px solid #E41951;
+   color: black;
+  }
+}
+
+
+
+/************************************************/
+/* centering main section of page in the middle */
+/************************************************/
+
+/* center everything in main container */
+.main-container {
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 1200px;
+  padding: 0px 30px 20px 20px;
+}
+
+/******************/
+/* slide/carousel */
+/*****************/
+
+/* since header is fixed and want fill slider visible */
+#carouselExampleControls {
+  margin-top: 80px;
+}
+
+/*************************/
+/* shop by category grid */
+/*************************/
+
+/* max-width 1200 layoput */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+/* indiv grid container to position lable and sale */
+.category-grid-indiv {
+  position: relative;
+}
+
+.category-grid-indiv:hover {
+  cursor:pointer;
+  opacity: 0.6;
+}
+
+/* auto size image to grid container */
+.category-grid-indiv img {
+  max-width: 100%; 
+  display: block; 
+  height: auto;
+}
+
+/* need this div because images are different sizes so images can be auto sized and label can be consistently placed on top */
+.category-grid-indiv-label {
+  text-align: center;
+  position: absolute;
+  background-color: #9FCCC6; 
+  bottom: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.category-grid-indiv-label h3 {
+  padding: 5px 0 5px 0; 
+  margin: 0px;
+}
+
+/* make label white when whole grid is hovered */
+.category-grid-indiv:hover .category-grid-indiv-label {
+  color: white;
+}
+
+.sale {
+  background-color: #E41951;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  padding: 10px; 
+  color: white;
+  
+}
+
+.sale h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* between tablet and up to big screen: handle grid layour*/ 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .category-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* For tablet and up: seperate media queries to handle sale bar expansion on hover */
+@media (min-width: 768px) {
+
+  .sale {
+    width: 20%;
+    transition: width 0.5s ease-in-out;
+    box-shadow: 0 4px 4px black;
+  }
+
+  .category-grid-indiv:hover .sale {
+    width: 100%; 
+  }
+
+  .category-grid-indiv:hover {
+    box-shadow: 0 0 10px black;
+  }
+}
+
+/* For smaller tablet and down: seperate media queries to handle sale bar expansion on hover */
+@media (max-width: 768px) {
+
+  .category-grid {
+    margin-right: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid-indiv {
+    padding: 10px;
+  }
+
+  .category-grid-indiv img {
+    display: none;
+  }
+
+  .category-grid-indiv-label {
+    border: 1px solid black;
+  }
+
+  .category-grid-indiv-label .h3 {
+    text-align: end;
+    padding-right: 10px;
+  }
+
+  /* absolutely place sale div */
+  .sale {
+    padding: 7px;
+    top: -14px;
+    left: 10px;
+    z-index: 600;
+  }
+  
+  /* using a different method since want label h3 text displayed on top of colour */
+  .saleplace {
+    background: linear-gradient(to left,#9FCCC6 50%, #E41951 50%) right;
+    background-size: 200%;
+    transition:  .5s ease-out;
+  }
+
+  .category-grid-indiv:hover .saleplace {
+    background-position: left;
+  }
+}
+
+
+
+/*******************************/
+/* Styling Inspiration section */
+/*******************************/
+
+
+.lookbook-content {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* have image span 2 columns */
+.lookbook-image {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  position: relative;
+}
+
+.lookbook-image img {
+  max-width: 100%; 
+  display: block; 
+  height: auto;
+}
+
+.lookbook-button {
+  color: black;
+  padding: 15px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  right: 0;
+  width: fit-content;
+  background-color: #9FCCC6;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.lookbook-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color:#E41951;
+  border: 1px solid #E41951;
+
+}
+
+.lookbook-h3 {
+  padding-right: 20px;
+  margin-bottom: 40px;
+}
+
+/* .circle .content are for placing 2022 christmas gift guide over image */ 
+.circle {
+  background-color: #E41951;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  transform: rotate(30deg);
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.content span {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+
+
+/*********/
+/* About */
+/*********/
+
+.about_section-button {
+  color: black;
+  padding: 15px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  right: 0;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.about_section-button:hover {
+  background-color: #9FCCC6;
+  color: white;
+  cursor: pointer;
+}
+
+/* classes for javascript to display/remove */
+.moreabout {
+  display: none;
+}
+
+.moreabout-toggle {
+  display: block;
+}
+
+
+
+/**********/
+/* footer */
+/**********/
+
+/* needed so many divs to get the bottom part of the footer to be max width */
+
+.footer-main {
+  width: 100%;
+  background-color: #9FCCC6;
+}
+
+.footer-content {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-another {
+  border-top: 1px solid #d3d3d3;
+  width: 100%;
+  background: #fff 0 0 no-repeat padding-box;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.footer-top-indiv {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.footer-top-indiv img {
+  width: 60px;
+  margin-right: 18px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+}
+
+.footer-bottom-column{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* table and small tables change footer layout */
+@media (max-width:768px) and (min-width:580px) {
+  .footer-top-indiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* for small tablets change footer from 4 columns to 1 */
+@media (max-width:580px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**********************/
+/* feedback container */
+/**********************/
+
+.feedback-container {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  border-radius: 20px 0 0 20px;
+  width: 600px;
+  background-color: #9FCCC6;
+  z-index: 100;
+  border: 1px solid black;
+  /* move out of page to start with */
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.feedback-button {
+  /* this is to position the tab left of main div */
+  position: absolute;
+  left: -82px;
+  bottom: 100px;
+  padding: 10px 20px;
+  transform: rotate(-90deg);
+
+
+  border-radius: 20px 20px 0 0; 
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: black;
+}
+
+.feedback-button:hover{
+  cursor: pointer;
+}
+
+.feedback-form {
+  padding: 30px;
+  width: 600px;
+}
+
+.feedback-open {
+  /* move onto main page through javascript */
+  transform: translateX(40%);
+  opacity: 1;
+  z-index: 900;
+}
+
+.feedback-row {
+  padding-bottom: 10px;
+}
+
+.feedback-name {
+  display:flex;
+  width: 150px;
+}
+
+input[type=submit] {
+  margin-top: 30px;
+  padding: 5px 30px;
+  width: fit-content;
+}
+
+label,input{
+  display:flex;
+  flex-direction:column;
+  width: 300px;
+}
+
+#comments {
+  height: 300px;
+  width: 300px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+select:focus {
+  background: white;
+  border: 2px solid black;
+  outline: none;
+  box-shadow: 0 0 6px grey;
+}
+
+.red {
+  color: #E41951;
+  font-weight: 500;
+}
+
+.red-border{
+  border: 2px solid #E41951;
+}
+
+/******************/
+/* Second page    */
+/* Stores Styling */
+/******************/
+
+.store-container {
+  margin-top: 80px;
+  display:grid;
+}
+
+.store-container-indiv {
+  border: 1px solid black;
+  border-radius: 20px;
+  background: #fff 0 0 no-repeat padding-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "add-tlf add-tlf"
+    "details store-buttons";
+}
+
+/* when whole div is hovered */
+.store-container-indiv:hover {
+  box-shadow: 0 0px 10px black;
+}
+
+.store-title {
+  grid-area: title;
+  padding: 20px 20px 0px 20px;
+}
+
+.add-tlf {
+  grid-area: add-tlf;
+  padding: 20px 20px 0px 20px;
+}
+
+
+.store-details {
+  grid-area: details;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.store-details li { 
+  list-style: none
+}
+
+.store-details li span {
+  display: inline-block;
+  width: 170px;
+}
+
+.address {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.tlf {
+  font-weight: 600;
+}
+
+.store-buttons {
+  grid-area: store-buttons;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.store-info, .directions {
+  background-color:  #9FCCC6;
+  text-align: center;
+  width: 200px;
+  margin: 5px auto;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: all 1s ease-out;
+}
+
+.store-info:hover {
+  background-color: white;
+  box-shadow: 0 0 10px grey;
+}
+
+/* reponsive between big screen and smaller screens */
+@media (min-width: 1200px) {
+  .store-container {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1200px){
+  .store-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .store-container-indiv {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "add-tlf"
+      "details"
+      "store-buttons";
+  }
+}
+
+
+
+/*************/
+/* for modal */
+/************/
+
+/* blur bakcground when modal active */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 910;
+}
+
+/* to toggle between modal hide and show */
+.hidden {
+  display: none;
+}
+
+
+.modal-div {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0 20px 20px 20px;
+  border-radius: 20px;
+  border: 10px solid #9FCCC6;
+
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.modal-sec {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-sec p {
+  text-align:left;
+}
+
+.modal-cls-button {
+  position: absolute;
+  right: 2;
+  top: 2;
+}
+
+.modal-cls-button:hover {
+  background-color: grey;
+}
+
+.modal-store-btn {
+  background-color: #9FCCC6;
+  width: 90%;
+  border-radius: 20px; 
+  margin-left: 20px;
+
+}
+
+.modal-store-btn:hover {
+  box-shadow: 0 0 10px black;
+  cursor:pointer;
+}
+
+
+.modal-store-btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+
+  /* this makes the whole div clickable */
+  height: 100%;
+  width: 100%;
+
+  /* to center anchor text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-text {
+  width: 80%;
+}
+
+@media (max-width: 768px){
+  .modal-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-text p {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .modal-store-btn {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .modal-content .separator{
+    display: block;
+  }
+}
