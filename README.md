@@ -1,6 +1,7 @@
 # Homewares Galore
 
 This is my final project for the General Assembly Front-end Web development course.
+
 The course ran over 10 weeks with 2x 3 hour sessions per week.
 
 You can access my site [here](https://ewilkie.github.io/GA-Final-Project/)
