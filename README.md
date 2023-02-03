@@ -36,6 +36,7 @@ You can access my site [here](https://ewilkie.github.io/GA-Final-Project/)
 * **Contact us:** when pressing this in navbar a modal box appears containing contact info
 * **Sale:** hovering over any box with "Sale" text
 * **Read more:** Pressing the read more button in the about section will trigger more text to be displayed
+* **Contact us button:** redirects to store location page 
 
 ## Page built with pure JS
 <a name="pure-js"></a>
