@@ -17,8 +17,8 @@
                     <h1>Homewares Galore</h1>
                 </div>
                 <nav class="nav-outer">
-                    <!-- hamburger initially set to hidden with js, shown for mobile site -->
-                    <img class="menu-control" src="https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-animations-lesson-images/img/hamburger.svg" alt="Hamburger" role="navigation">
+                    <!-- hamburger initially set to hidden with css, shown for mobile site -->
+                    <img src="https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-animations-lesson-images/img/hamburger.svg" alt="Hamburger" role="navigation">
                     <div class="nav">
                         <div class="nav-menu-item"><a class="nav-link active" href="index.html">Home</a></div>
                         <div class="nav-menu-item"><a class="nav-link" href="stores.html">Store Locations</a></div>
@@ -28,7 +28,7 @@
             </div>
         </header>
         <!-- Contact Us Section over all pages -->        
-        <!-- Overlay for modal / blur background when modal displayed -->
+        <!-- Overlay for modal / blur background when modal displayed / using js-->
         <div class="overlay hidden" ></div>
         <!-- modal section -->
         <section class="modal-div hidden">
@@ -208,6 +208,7 @@
                 <p> Our inspirational collections are designed to make styling easy, and our stores are set up to help you bring your home décor aspirations to life.</p>
                 <p> To shop our extensive range of premium bedding and homewares, we invite you to shop online or visit us in one of our stores </p>
                 <div class="about_section-button">READ MORE</div>
+                <!-- this section is initially hidden with display none in css / js used to display via button above in index.js file-->
                 <div class="moreabout">
                     <h3 class="h3">A happy home inspires great memories</h3>
                     <p> Australian owned, the Homewares galore brand reflects our love of the land we call home, celebrating the beauty of the modern Australian lifestyle. From our design studio and headquarters in Melbourne, we provide exclusive product collections that will help you create a space in your home to fill with lasting memories.</p>
@@ -220,7 +221,54 @@
                 </div>
             </section>
         </main>
-        <!--  end of main start of Feedback container -->
+
+        <!-- Start of footer / sets bg colour for entire footer -->
+        <footer class="footer-main">
+            <!-- seperate div to create full page width white bg colour for top part of footer containing images--> 
+            <div class="footer-top-content">
+                <!-- to centre div and child elements with grid-->
+                <div class="footer-top">
+                    <div class="footer-top-indiv">
+                        <img src="images/footer/delivery2.png" alt="">
+                        <div>
+                            <h4 class="h4">Standard Free Delivery</h4>
+                            <p>Free delivery on all orders over $200</p>
+                        </div>
+                    </div>
+                    <div class="footer-top-indiv">
+                        <img src="images/footer/return.png" alt="">
+                        <div>
+                        <h4 class="h4">15 day in store returns</h4>
+                        <p>30 day returns for rewards members</p>
+                        </div>
+                    </div>
+                    <div class="footer-top-indiv">
+                        <img src="images/footer/buy_now.png" alt="">
+                        <div>
+                        <h4 class="h4">Buy now, pay later</h4>
+                        <p>Using AfterPay, Paypal or Zip</p>
+                        </div>
+                    </div>
+                    <div class="footer-top-indiv">
+                        <img src="images/footer/aus.png" alt="">
+                        <div>
+                        <h4 class="h4">Designed in Australia</h4>
+                        <p>Quality products, locally designed</p>
+                        </div>
+                    </div>
+                </div>                 
+            </div>
+            <!-- seperate div to centre to max width -->
+            <div class="footer-bottom">
+                <!-- align text to center of max-width -->
+                <div class="footer-bottom-copy"> 
+                    © 2022 Homewares Galore. All Rights Reserved.
+                    <!-- <div class="footer-bottom-copy"> © 2022 Homewares Galore. All Rights Reserved. </div> -->
+                </div>
+            </div>
+        </footer>
+
+        <!--  Feedback container over any -->
         <section class="feedback-container">
             <div class="feedback-button">Feedback</div>
             <form class="feedback-form">  
@@ -263,50 +311,6 @@
                 </fieldset>
             </form>
         </section>
-
-        <!-- Start of footer -->
-        <footer class="footer-main">
-            <div class="footer-content">
-                <div class="footer-another">
-                    <div class="footer-top">
-                        <div class="footer-top-indiv">
-                            <img src="images/footer/delivery2.png" alt="">
-                            <div>
-                                <h4 class="h4">Standard Free Delivery</h4>
-                                <p>Free delivery on all orders over $200</p>
-                            </div>
-                        </div>
-                        <div class="footer-top-indiv">
-                            <img src="images/footer/return.png" alt="">
-                            <div>
-                            <h4 class="h4">15 day in store returns</h4>
-                            <p>30 day returns for rewards members</p>
-                            </div>
-                        </div>
-                        <div class="footer-top-indiv">
-                            <img src="images/footer/buy_now.png" alt="">
-                            <div>
-                            <h4 class="h4">Buy now, pay later</h4>
-                            <p>Using AfterPay, Paypal or Zip</p>
-                            </div>
-                        </div>
-                        <div class="footer-top-indiv">
-                            <img src="images/footer/aus.png" alt="">
-                            <div>
-                            <h4 class="h4">Designed in Australia</h4>
-                            <p>Quality products, locally designed</p>
-                            </div>
-                        </div>
-                    </div>                 
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="footer-bottom-column">
-                    <div class="footer-bottom-copy"> © 2022 Homewares Galore. All Rights Reserved. </div>
-                </div>
-            </div>
-        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
