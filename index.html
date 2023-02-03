@@ -9,8 +9,26 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
     </head>
-    <body>        
-        <!-- Overlay for modal -->
+    <body>
+        <!-- Header -->
+        <header class="header-main">
+            <div class="header-content">           
+                <div class="logo">
+                    <h1>Homewares Galore</h1>
+                </div>
+                <nav class="nav-outer">
+                    <!-- hamburger initially set to hidden with js, shown for mobile site -->
+                    <img class="menu-control" src="https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-animations-lesson-images/img/hamburger.svg" alt="Hamburger" role="navigation">
+                    <div class="nav">
+                        <div class="nav-menu-item"><a class="nav-link active" href="index.html">Home</a></div>
+                        <div class="nav-menu-item"><a class="nav-link" href="stores.html">Store Locations</a></div>
+                        <div class="nav-menu-item contact"><a class="nav-link" href="">Contact Us</a></div> 
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Contact Us Section over all pages -->        
+        <!-- Overlay for modal / blur background when modal displayed -->
         <div class="overlay hidden" ></div>
         <!-- modal section -->
         <section class="modal-div hidden">
@@ -33,22 +51,7 @@
                 </div>      
             </div>
         </section> 
-        <!-- Header -->
-        <header class="header-main">
-            <div class="header-content">           
-                <div class="logo">
-                    <h1>Homewares Galore</h1>
-                </div>
-                <nav class="nav-outer">
-                    <img class="menu-control" src="https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-animations-lesson-images/img/hamburger.svg" alt="Hamburger" role="navigation">
-                    <div class="nav">
-                        <div class="nav-menu-item"><a class="nav-link active" href="index.html">Home</a></div>
-                        <div class="nav-menu-item"><a class="nav-link" href="stores.html">Store Locations</a></div>
-                        <div class="nav-menu-item contact"><a class="nav-link" href="">Contact Us</a></div> 
-                    </div>
-                </nav>
-            </div>
-        </header>
+
         <!-- main content -->
         <main class="main-container">
             <!-- Carousel -->
