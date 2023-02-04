@@ -154,7 +154,7 @@ html,body
     padding: 20px;
   }
 
-   /* this is to keep nav visible when nov-outer img no longer hovered */
+   /* this is to keep nav visible when nav-outer img no longer hovered */
   .nav:hover {
     border: 1px solid #E41951;
     display: inline-block;
